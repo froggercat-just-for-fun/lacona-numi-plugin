@@ -1,0 +1,13 @@
+{
+  "numiIntegration": {
+    "title": "Numi Integration",
+    "type": "object",
+    "properties": {
+      "message": {
+        "title": "Alert message",
+        "type": "string",
+        "default": "Hello, world!"
+      }
+    }
+  }
+}
