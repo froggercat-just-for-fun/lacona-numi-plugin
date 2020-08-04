@@ -9,10 +9,16 @@ Why not do this in Alfred, which is better-supported than Lacona? Because Lacona
 ## Hooking into Numi
 
 1. In Numi, check the "Enable Alfred Extension" box in settings. This enables Numi to listen to commands over a hardcoded port.
-    * The Alfred plugin's code is here: [Numi Alfred Integration on Github](https://github.com/nikolaeu/numi/blob/master/alfred/index.js)
 2. To test the connection is working, run `curl -G --data-urlencode 'q=${input}' http://localhost:15055`, where your `input` var can be any Numi-parseable statement, i.e. `2+2`.
 
 # Dev Notes
+
+## Resources
+
+* [The Alfred plugin's code](https://github.com/nikolaeu/numi/blob/master/alfred/index.js)
+* [Lacona CLI on github](https://github.com/laconalabs/lacona-cli)
+* [nodenv](https://github.com/nodenv/nodenv#nodenv-which)
+    * Don't forget to run `nodenv rehash` to get your commands added to the shims.
 
 ## Current Issues
 
