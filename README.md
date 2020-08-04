@@ -6,4 +6,21 @@ Why not do this in Alfred, which is better-supported than Lacona? Because Lacona
 
 [Lacona Plugin Documentation](https://docs.lacona.io/docs/basics/getting-started.html)
 
-(Numi ships with an Alfred plugin so I assume it exposes an API I can hook into with Lacona instead.)
+## Hooking into Numi
+
+1. In Numi, check the "Enable Alfred Extension" box in settings. This enables Numi to listen to commands over a hardcoded port.
+    * The Alfred plugin's code is here: [Numi Alfred Integration on Github](https://github.com/nikolaeu/numi/blob/master/alfred/index.js)
+2. To test the connection is working, run `curl -G --data-urlencode 'q=${input}' http://localhost:15055`, where your `input` var can be any Numi-parseable statement, i.e. `2+2`.
+
+# Dev Notes
+
+## Current Issues
+
+1. Running `lacona install` does not add demo command on the lacona app.
+    * There are no errors running.
+    * Weirdly enough, `lacona logs` shows nothing. Lacona should have some logs somewhere though?
+    * Maybe I'm running the wrong version of Lacona, or it installed to a weird place. I installed it using Setapp.
+
+## Ideas
+
+* To be honest, I think I could probably just copy the alfred osapplescript into my own apple script and use the existing Lacona apple script integration plugin. But that wouldn't have the pretty `n=` or `numi` command syntax.

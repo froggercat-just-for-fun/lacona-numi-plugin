@@ -14,7 +14,7 @@ export const MyNewCommand = {
   describe ({config}) {
     return (
       <literal
-        text='test my new command'
+        text='test halp'
         value={config.numiIntegration.message} />
     )
   }
